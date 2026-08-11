@@ -1,14 +1,13 @@
- import { renderHeader } from '../components/header.js';
+import { renderHeader } from '../components/header.js';
 import { renderHero } from '../components/hero.js';
 import { renderFeatures } from '../components/features.js';
 import { renderAbout } from '../components/about.js';
 import { renderFooter } from '../components/footer.js';
 
-const APK_DRIVE_ID = '1Tufw7xp-_WyWKfVCqLpKRpdLn4R73BGn';
+const APK_URL = 'https://github.com/AndresPrograma-desing/Anubis.atm-web/releases/download/v1.0.0/anubis.atm.apk';
 
 function descargarAPK() {
-  const urlDescarga = `https://drive.usercontent.google.com/download?id=${APK_DRIVE_ID}&export=download&confirm=t`;
-  window.open(urlDescarga, '_blank', 'noopener');
+  window.location.href = APK_URL;
 }
 
 const appContainer = document.getElementById('app');
