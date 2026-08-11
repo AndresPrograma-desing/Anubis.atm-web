@@ -4,14 +4,11 @@ import { renderFeatures } from '../components/features.js';
 import { renderAbout } from '../components/about.js';
 import { renderFooter } from '../components/footer.js';
 
+const APK_DRIVE_ID = '1Tufw7xp-_WyWKfVCqLpKRpdLn4R73BGn';
+
 function descargarAPK() {
-  const rutaAPK = './assets/Application/app-debug.apk';
-  const a = document.createElement('a');
-  a.href = rutaAPK;
-  a.download = 'Anubis.atm.apk';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
+  const urlDescarga = `https://drive.google.com/uc?export=download&id=${APK_DRIVE_ID}`;
+  window.open(urlDescarga, '_blank', 'noopener');
 }
 
 const appContainer = document.getElementById('app');
