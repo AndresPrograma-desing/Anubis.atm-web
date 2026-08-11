@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anubis.atm — Control de gastos sin complicaciones</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              black: '#0a0a0a',
+              cream: '#fcfbf9',
+              accent: '#2563eb',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-brand-cream text-brand-black font-sans antialiased selection:bg-black selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+  <div id="app" class="min-h-screen flex flex-col justify-between"></div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
