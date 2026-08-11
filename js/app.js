@@ -1,4 +1,4 @@
-import { renderHeader } from '../components/header.js';
+ import { renderHeader } from '../components/header.js';
 import { renderHero } from '../components/hero.js';
 import { renderFeatures } from '../components/features.js';
 import { renderAbout } from '../components/about.js';
@@ -7,7 +7,7 @@ import { renderFooter } from '../components/footer.js';
 const APK_DRIVE_ID = '1Tufw7xp-_WyWKfVCqLpKRpdLn4R73BGn';
 
 function descargarAPK() {
-  const urlDescarga = `https://drive.google.com/uc?export=download&id=${APK_DRIVE_ID}`;
+  const urlDescarga = `https://drive.usercontent.google.com/download?id=${APK_DRIVE_ID}&export=download&confirm=t`;
   window.open(urlDescarga, '_blank', 'noopener');
 }
 
