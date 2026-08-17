@@ -1,8 +1,12 @@
 {
-    "latestVersionCode": 4,
-    "latestVersionName": "4.0",
-    "downloadUrl": "https://github.com/AndresPrograma-desing/Anubis.atm-web/releases/download/v1.2.0/anubis.atmv4.apk",
-    "changelog": "Mejoras para ti usuario",
-    "forceUpdate": false
-  }
-  
+  "//": "NO OLVIDAR CAMBIAR EL CHANGELOG",
+  "Emogis": [
+    "💰", "💵", "💳", "📈", "📊", "💎", "🏦", "🪙",
+    "🚀", "🔥", "⚡", "🎯", "💪", "🏆", "👑", "🌟"
+  ],
+  "latestVersionCode": 4,
+  "latestVersionName": "4.0",
+  "downloadUrl": "https://github.com/AndresPrograma-desing/Anubis.atm-web/releases/download/v1.2.0/anubis.atmV5.apk",
+  "changelog": "Seguimos trabajando para mantener la app al día 🌟🚀",
+  "forceUpdate": false
+}
