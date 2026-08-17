@@ -4,9 +4,9 @@
     "💰", "💵", "💳", "📈", "📊", "💎", "🏦", "🪙",
     "🚀", "🔥", "⚡", "🎯", "💪", "🏆", "👑", "🌟"
   ],
-  "latestVersionCode": 6,
-  "latestVersionName": "5.0.1",
+  "latestVersionCode": 7,
+  "latestVersionName": "5.0.2",
   "downloadUrl": "https://github.com/AndresPrograma-desing/Anubis.atm-web/releases/download/v1.2.0/anubis.atmV5.1.apk",
-  "changelog": "usuarios notificaron una falla del app, pero ya la reparamos ⚡🎯",
+  "changelog": "retrazos de notificaciones solucionado 💪",
   "forceUpdate": true
 }
