@@ -1,7 +1,10 @@
 export function renderHero() {
-    // Ruta local a tu video dentro de la carpeta assets
-    const videoSrc = "./assets/video/AnubisApp.mp4";
-  
+    // Rutas locales a los SVG dentro de la carpeta assets
+    const heroSlides = [
+      { src: "./assets/financial-advisor.svg", alt: "Ilustración de un asesor financiero usando la app Anubis.atm" },
+      { src: "./assets/payment.svg", alt: "Ilustración de un pago digital gestionado con Anubis.atm" },
+    ];
+
     return `
       <main id="inicio" class="max-w-7xl mx-auto w-full px-6 sm:px-8 my-auto py-10 sm:py-14 lg:py-20 relative">
 
@@ -40,27 +43,29 @@ export function renderHero() {
                   Ver funcionalidades
                 </a>
               </div>
+
+              <!-- Mini gráfico animado -->
+              <div class="flex items-end gap-2.5 h-16 mx-auto lg:mx-0 w-fit bg-white/70 backdrop-blur-sm border border-neutral-200/70 rounded-2xl px-7 py-5 shadow-sm">
+                <span class="hero-chart-bar bg-blue-600" style="animation-duration:1.5s; animation-delay:0s"></span>
+                <span class="hero-chart-bar bg-indigo-400" style="animation-duration:1.8s; animation-delay:.2s"></span>
+                <span class="hero-chart-bar bg-blue-600" style="animation-duration:1.4s; animation-delay:.1s"></span>
+                <span class="hero-chart-bar bg-indigo-400" style="animation-duration:1.9s; animation-delay:.35s"></span>
+                <span class="hero-chart-bar bg-blue-600" style="animation-duration:1.6s; animation-delay:.15s"></span>
+              </div>
             </div>
           </div>
 
-          <!-- Columna Derecha: Mockup / Video de la App -->
+          <!-- Columna Derecha: Ilustración de la App -->
           <div class="lg:col-span-6 relative flex justify-center">
             <div class="bg-gradient-to-b from-neutral-100/90 to-white/60 backdrop-blur-sm rounded-3xl p-5 sm:p-8 relative overflow-hidden border border-neutral-200/70 shadow-sm flex items-center justify-center w-full max-w-[280px] sm:max-w-md">
 
-              <!-- Contenedor del Video estilo Mockup de Celular -->
-              <div class="w-full max-w-[220px] sm:max-w-[320px] bg-black rounded-[2.5rem] p-3 shadow-2xl border-4 border-neutral-800 relative z-10 overflow-hidden">
-                <div class="relative w-full overflow-hidden rounded-[2rem] aspect-[9/19.5] bg-neutral-900 flex items-center justify-center">
-
-                  <video
-                    src="${videoSrc}"
-                    autoplay
-                    loop
-                    muted
-                    playsinline
-                    class="w-full h-full object-cover rounded-[2rem]">
-                    Tu navegador no soporta reproducción de video.
-                  </video>
-
+              <!-- Bucle de Ilustraciones SVG -->
+              <div id="hero-slider" class="w-full max-w-[220px] sm:max-w-[320px] relative z-10 overflow-hidden">
+                <div id="hero-slider-track" class="flex">
+                  ${heroSlides.map(({ src, alt }) => `
+                  <img src="${src}" alt="${alt}" class="w-full h-auto flex-shrink-0" />
+                  `).join('')}
+                  <img src="${heroSlides[0].src}" alt="" aria-hidden="true" class="w-full h-auto flex-shrink-0" />
                 </div>
               </div>
 

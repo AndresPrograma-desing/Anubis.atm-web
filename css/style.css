@@ -2,3 +2,18 @@
     mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
     -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
   }
+
+.hero-chart-bar {
+  width: 10px;
+  height: 100%;
+  border-radius: 9999px;
+  transform-origin: bottom;
+  animation-name: heroChartPulse;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes heroChartPulse {
+  0%, 100% { transform: scaleY(0.35); }
+  50% { transform: scaleY(1); }
+}

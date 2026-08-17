@@ -49,3 +49,29 @@ function setupMobileMenu() {
 }
 
 setupMobileMenu();
+
+function setupHeroSlider() {
+  const track = document.getElementById('hero-slider-track');
+  if (!track) return;
+
+  const totalSlides = track.children.length;
+  let index = 0;
+
+  const goNext = () => {
+    index += 1;
+    track.style.transition = 'transform 1s ease-in-out';
+    track.style.transform = `translateX(-${index * 100}%)`;
+
+    if (index === totalSlides - 1) {
+      setTimeout(() => {
+        track.style.transition = 'none';
+        index = 0;
+        track.style.transform = 'translateX(0%)';
+      }, 1000);
+    }
+  };
+
+  setInterval(goNext, 3500);
+}
+
+setupHeroSlider();
