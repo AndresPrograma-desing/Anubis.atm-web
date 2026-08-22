@@ -30,9 +30,9 @@ export function renderAbout() {
       </div>
 
       <div class="max-w-7xl mx-auto w-full px-6 sm:px-8 relative">
-        <div class="max-w-2xl space-y-4 mb-14 sm:mb-20">
+        <div class="reveal max-w-2xl space-y-4 mb-14 sm:mb-20">
           <span class="text-xs font-semibold tracking-widest uppercase text-blue-400">Sobre la app</span>
-          <h2 class="text-3xl sm:text-4xl xl:text-5xl font-extrabold tracking-tight leading-tight">
+          <h2 class="type-heading text-3xl sm:text-4xl xl:text-5xl font-extrabold tracking-tight leading-tight">
             Hecha para quien vive del Pago Móvil.
           </h2>
           <p class="text-neutral-300 text-base sm:text-lg leading-relaxed">
@@ -44,8 +44,8 @@ export function renderAbout() {
 
         <div class="grid md:grid-cols-3 gap-6 sm:gap-8 mb-14 sm:mb-20">
           ${STEPS.map(
-            (s) => `
-            <div class="space-y-3">
+            (s, i) => `
+            <div class="reveal [transition-delay:${i * 100}ms] space-y-3">
               <span class="text-sm font-mono text-blue-400">${s.n}</span>
               <h3 class="text-lg sm:text-xl font-bold tracking-tight">${s.title}</h3>
               <p class="text-sm text-neutral-400 leading-relaxed">${s.desc}</p>
@@ -56,8 +56,8 @@ export function renderAbout() {
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-10 border-t border-white/10">
           ${STATS.map(
-            (s) => `
-            <div class="text-center sm:text-left">
+            (s, i) => `
+            <div class="reveal [transition-delay:${i * 100}ms] text-center sm:text-left">
               <div class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">${s.value}</div>
               <div class="text-sm text-neutral-400 mt-2">${s.label}</div>
             </div>

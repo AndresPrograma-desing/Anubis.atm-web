@@ -1,6 +1,16 @@
 export function renderHeader() {
   return `
-    <header class="max-w-7xl mx-auto w-full px-6 sm:px-8 pt-6 sm:pt-8 pb-4 relative z-30">
+    <div class="sticky top-0 z-40">
+      <div class="announcement-bar text-white text-center text-[11px] sm:text-xs font-bold tracking-wide uppercase py-2 px-4">
+        <span class="inline-flex items-center gap-1.5">
+          <svg class="bounce-icon w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12v9H4v-9M2 7h20v5H2V7zm10 0v14M12 7c-1.5-3-6-3-6 0s4.5 3 6 0zm0 0c1.5-3 6-3 6 0s-4.5 3-6 0z"/>
+          </svg>
+          <span id="announcement-text">100% Gratis · Sin anuncios · Sin registros, para siempre</span>
+        </span>
+      </div>
+      <header class="bg-brand-cream/80 backdrop-blur-md border-b border-black/5">
+    <div class="max-w-7xl mx-auto w-full px-6 sm:px-8 py-4 sm:py-5">
       <div class="flex items-center justify-between">
         <a href="#inicio" class="flex items-center gap-2">
           <span class="font-bold tracking-tighter text-xl sm:text-2xl text-black uppercase">ANUBIS<span class="text-blue-600">.ATM</span></span>
@@ -36,6 +46,8 @@ export function renderHeader() {
           Descargar APK
         </button>
       </nav>
-    </header>
+    </div>
+      </header>
+    </div>
   `;
 }

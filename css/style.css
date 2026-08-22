@@ -17,3 +17,67 @@
   0%, 100% { transform: scaleY(0.35); }
   50% { transform: scaleY(1); }
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .7s ease, transform .7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.announcement-bar {
+  background: linear-gradient(90deg, #1d4ed8, #4f46e5, #1d4ed8);
+  background-size: 200% 100%;
+  animation: announcementGradient 6s ease infinite;
+}
+
+@keyframes announcementGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.bounce-icon {
+  display: inline-block;
+  animation: bounceIcon 1.6s ease-in-out infinite;
+}
+
+@keyframes bounceIcon {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-2px) rotate(-8deg); }
+}
+
+.type-heading {
+  min-height: 1em;
+}
+
+.type-heading.typing-cursor::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 2px;
+  color: currentColor;
+  animation: typingBlink 0.9s steps(1) infinite;
+}
+
+@keyframes typingBlink {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announcement-bar,
+  .bounce-icon {
+    animation: none;
+  }
+}

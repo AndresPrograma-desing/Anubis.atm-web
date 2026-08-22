@@ -29,6 +29,11 @@ const FEATURES = [
     title: 'Tus datos, en tu dispositivo',
     desc: 'Todo se guarda en una base de datos local (Room). No hay cuentas, ni sincronización en la nube: la información no sale de tu teléfono.',
   },
+  {
+    icon: 'gift',
+    title: '100% gratis, sin anuncios',
+    desc: 'Anubis.atm no muestra publicidad ni tiene versiones de pago o suscripciones: todas las funciones están disponibles gratis, siempre.',
+  },
 ];
 
 const ICONS = {
@@ -38,11 +43,12 @@ const ICONS = {
   currency: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 1v22M17 5.5c0-1.93-2.24-3.5-5-3.5S7 3.57 7 5.5 9.24 9 12 9s5 1.57 5 3.5-2.24 3.5-5 3.5-5-1.57-5-3.5"/>',
   history: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12a9 9 0 109-9 9.75 9.75 0 00-7 3L3 8M3 3v5h5M12 7v5l4 2"/>',
   lock: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 15v2m-5 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H7a2 2 0 00-2 2v6a2 2 0 002 2zM7 9V7a5 5 0 0110 0v2"/>',
+  gift: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 12v9H4v-9M2 7h20v5H2V7zm10 0v14M12 7c-1.5-3-6-3-6 0s4.5 3 6 0zm0 0c1.5-3 6-3 6 0s-4.5 3-6 0z"/>',
 };
 
-function featureCard({ icon, title, desc }) {
+function featureCard({ icon, title, desc }, index) {
   return `
-    <div class="group bg-white border border-neutral-200/80 rounded-3xl p-6 sm:p-7 hover:border-black/20 hover:shadow-md transition-all duration-200">
+    <div class="reveal [transition-delay:${index * 80}ms] group bg-white border border-neutral-200/80 rounded-3xl p-6 sm:p-7 hover:border-black/20 hover:shadow-md transition-all duration-200">
       <div class="w-11 h-11 rounded-2xl bg-blue-600/10 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-black group-hover:text-white transition-colors">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">${ICONS[icon]}</svg>
       </div>
@@ -55,9 +61,9 @@ function featureCard({ icon, title, desc }) {
 export function renderFeatures() {
   return `
     <section id="caracteristicas" class="max-w-7xl mx-auto w-full px-6 sm:px-8 py-16 sm:py-24 relative z-10">
-      <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16 space-y-4">
+      <div class="reveal max-w-2xl mx-auto text-center mb-12 sm:mb-16 space-y-4">
         <span class="text-xs font-semibold tracking-widest uppercase text-blue-600">Funcionalidades</span>
-        <h2 class="text-3xl sm:text-4xl xl:text-5xl font-extrabold tracking-tight text-black leading-tight">
+        <h2 class="type-heading text-3xl sm:text-4xl xl:text-5xl font-extrabold tracking-tight text-black leading-tight">
           Todo lo que necesitas para llevar tus cobros al día
         </h2>
         <p class="text-neutral-600 text-base sm:text-lg leading-relaxed">

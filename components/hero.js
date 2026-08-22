@@ -20,19 +20,21 @@ export function renderHero() {
           <!-- Columna Izquierda: Texto -->
           <div class="lg:col-span-6 space-y-8 pr-0 lg:pr-6 text-center lg:text-left">
             <div class="relative space-y-6 sm:space-y-8">
-              <span class="inline-flex items-center gap-2 bg-black/5 border border-black/10 text-xs font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full text-neutral-700">
-                Gratis · 100% en tu teléfono
-              </span>
+              <div class="reveal flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                <span class="inline-flex items-center gap-2 bg-black/5 border border-black/10 text-xs font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full text-neutral-700">
+                  Gratis · 100% en tu teléfono
+                </span>
+              </div>
 
-              <h1 class="text-4xl sm:text-6xl xl:text-7xl font-extrabold tracking-tight text-black leading-[1.1] sm:leading-[1.08]">
+              <h1 class="reveal type-heading [transition-delay:80ms] text-4xl sm:text-6xl xl:text-7xl font-extrabold tracking-tight text-black leading-[1.1] sm:leading-[1.08]">
                 Control que <br class="hidden sm:inline"/>habla claro.
               </h1>
 
-              <p class="text-neutral-700 text-base sm:text-xl font-normal max-w-md mx-auto lg:mx-0 leading-relaxed">
+              <p class="reveal [transition-delay:160ms] text-neutral-700 text-base sm:text-xl font-normal max-w-md mx-auto lg:mx-0 leading-relaxed">
                 Escanea tus comprobantes de Pago Móvil y transferencias: Anubis.atm extrae el monto, banco y referencia automáticamente y convierte tus totales a USD, USDT y EUR, todo sin salir de tu teléfono.
               </p>
 
-              <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+              <div class="reveal [transition-delay:240ms] pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
                 <button id="btn-apk-hero" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-black hover:bg-neutral-800 text-white font-medium px-7 py-3.5 rounded-2xl text-sm transition-all shadow-sm">
                   <span>Instalar aplicación</span>
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -45,7 +47,7 @@ export function renderHero() {
               </div>
 
               <!-- Mini gráfico animado -->
-              <div class="flex items-end gap-2.5 h-16 mx-auto lg:mx-0 w-fit bg-white/70 backdrop-blur-sm border border-neutral-200/70 rounded-2xl px-7 py-5 shadow-sm">
+              <div class="reveal [transition-delay:320ms] flex items-end gap-2.5 h-16 mx-auto lg:mx-0 w-fit bg-white/70 backdrop-blur-sm border border-neutral-200/70 rounded-2xl px-7 py-5 shadow-sm">
                 <span class="hero-chart-bar bg-blue-600" style="animation-duration:1.5s; animation-delay:0s"></span>
                 <span class="hero-chart-bar bg-indigo-400" style="animation-duration:1.8s; animation-delay:.2s"></span>
                 <span class="hero-chart-bar bg-blue-600" style="animation-duration:1.4s; animation-delay:.1s"></span>
@@ -56,7 +58,7 @@ export function renderHero() {
           </div>
 
           <!-- Columna Derecha: Ilustración de la App -->
-          <div class="lg:col-span-6 relative flex justify-center">
+          <div class="reveal [transition-delay:120ms] lg:col-span-6 relative flex justify-center">
             <div class="bg-gradient-to-b from-neutral-100/90 to-white/60 backdrop-blur-sm rounded-3xl p-5 sm:p-8 relative overflow-hidden border border-neutral-200/70 shadow-sm flex items-center justify-center w-full max-w-[280px] sm:max-w-md">
 
               <!-- Bucle de Ilustraciones SVG -->
