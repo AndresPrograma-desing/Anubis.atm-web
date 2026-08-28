@@ -4,9 +4,9 @@
     "💰", "💵", "💳", "📈", "📊", "💎", "🏦", "🪙",
     "🚀", "🔥", "⚡", "🎯", "💪", "🏆", "👑", "🌟"
   ],
-  "latestVersionCode": 9,
-  "latestVersionName": "9.0",
-  "downloadUrl": "https://github.com/AndresPrograma-desing/Anubis.atm-web/releases/download/2.0.0/anubis.atmV9.apk",
-  "changelog": "Nueva version, nueva funcionalidad 💎🎯",
+  "latestVersionCode": 10,
+  "latestVersionName": "10.0",
+  "downloadUrl": "https://github.com/AndresPrograma-desing/Anubis.atm-web/releases/download/2.0.0/anubis.atmV10.apk",
+  "changelog": "Nueva version, nueva funcionalidad 💎🎯  \n\n- nueva interfaz\n\n- mas opciones\n\n- Advertencia⚠️: Esta nueva version de la app puede eliminar los dato que ya tenes registrados. Ve a Perfil/Respaldo y Exporta tus datos para que no los pierdas, luego los importas 💪🏆 ",
   "forceUpdate": false
 }
