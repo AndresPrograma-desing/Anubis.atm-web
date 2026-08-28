@@ -4,7 +4,7 @@ import { renderFeatures } from '../components/features.js';
 import { renderAbout } from '../components/about.js';
 import { renderFooter } from '../components/footer.js';
 
-const APK_URL = 'https://github.com/AndresPrograma-desing/Anubis.atm-web/releases/download/2.0.0/anubis.atmV9.apk';
+const APK_URL = 'https://github.com/AndresPrograma-desing/Anubis.atm-web/releases/download/2.0.0/anubis.atmV10.apk';
 
 function descargarAPK() {
   window.location.href = APK_URL;
